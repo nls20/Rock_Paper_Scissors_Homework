@@ -1,0 +1,36 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<div id="header-container">
+    <form action="/play", method="post">
+        <div id="inner-form">
+            <label for="player_1_name">Player 1:</label>
+            <input type="text" name="player_1_name" id="player_1_name">
+
+            <label for="player_2_name">Player 2:</label>
+            <input type="text" name="player_2_name" id="player_2_name">
+
+            <label for="choice_1">Select a Choice: </label>
+            <select name="choice_1" id="choice_1">
+                    <option value="rock">rock</option>
+                    <option value="paper">paper</option>
+                    <option value="scissors">scissors</option>
+            </select>
+
+            <label for="choice_2">Select a Choice: </label>
+            <select name="choice_2" id="choice_2">
+                    <option value="rock">rock</option>
+                    <option value="paper">paper</option>
+                    <option value="scissors">scissors</option>
+            </select>
+            <input type="submit" value="submit">
+            
+        </div>
+
+    </form>
+    <section>
+        {{ result }}
+    </section>
+</div>
+{% endblock %}
